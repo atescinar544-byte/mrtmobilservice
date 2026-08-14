@@ -1,0 +1,390 @@
+@font-face {
+  font-family: "Nimbus Exact";
+  src: url("assets/nimbus-sans.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Nimbus Exact";
+  src: url("assets/nimbus-sans-bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+}
+
+:root {
+  --page-width: 793.7008px;
+  --page-height: 1122.5197px;
+  --page-scale: 1;
+  --ink: #0f172a;
+  --body: #334155;
+  --muted: #475569;
+  --line: #e2e8f0;
+  --paper: #f8fafc;
+  --cyan: #0284c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #dbe2ea;
+  color: var(--body);
+  font-family: "Nimbus Exact", Arial, sans-serif;
+}
+
+.document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 12px;
+}
+
+.sheet-frame {
+  position: relative;
+  width: calc(var(--page-width) * var(--page-scale));
+  height: calc(var(--page-height) * var(--page-scale));
+  flex: 0 0 auto;
+}
+
+.sheet {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: var(--page-width);
+  height: var(--page-height);
+  overflow: hidden;
+  background: var(--paper);
+  transform: scale(var(--page-scale));
+  transform-origin: top left;
+  box-shadow: 0 12px 38px rgba(15, 23, 42, 0.19);
+}
+
+.hero {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 232.3359px;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: white;
+}
+
+.brand-mark {
+  position: absolute;
+  left: 45px;
+  top: 40px;
+  width: 65px;
+  height: 65px;
+}
+
+.hero h1,
+.hero p,
+.intro-card h2,
+.intro-card p,
+.services h2,
+.service-card h3,
+.service-card ul,
+.cta h2,
+.cta p {
+  margin: 0;
+}
+
+.hero h1 {
+  position: absolute;
+  left: 135px;
+  top: 45.4px;
+  color: #fff;
+  font-size: 34.6667px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1.85px;
+  white-space: nowrap;
+}
+
+.tagline {
+  position: absolute;
+  left: 135px;
+  top: 83.1px;
+  color: #38bdf8;
+  font-size: 14.6667px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 2.15px;
+  white-space: nowrap;
+}
+
+.hero-rule {
+  position: absolute;
+  left: 45px;
+  top: 134.3359px;
+  width: 703.7008px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.person {
+  position: absolute;
+  left: 45px;
+  top: 151.1px;
+  color: #f8fafc;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.role {
+  position: absolute;
+  left: 45px;
+  top: 178.2px;
+  color: #94a3b8;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.intro-card {
+  position: absolute;
+  left: 45px;
+  top: 272.3359px;
+  width: 703.7008px;
+  height: 106.667px;
+  padding: 17.3px 22px 15px 25px;
+  overflow: hidden;
+  border-left: 5px solid var(--cyan);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.intro-card h2 {
+  color: var(--ink);
+  font-size: 18.6667px;
+  font-weight: 700;
+  line-height: 22.4px;
+}
+
+.intro-card p {
+  margin-top: 5.1px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  white-space: nowrap;
+}
+
+.services > h2 {
+  position: absolute;
+  left: 45px;
+  top: 408.7px;
+  width: 703.7008px;
+  height: 34px;
+  border-bottom: 2px solid var(--line);
+  color: var(--ink);
+  font-size: 18.6667px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.35px;
+}
+
+.service-card {
+  position: absolute;
+  padding: 21.1px 22px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--body);
+}
+
+.mobile-card,
+.computer-card {
+  top: 477.6699px;
+  width: 329.3504px;
+  height: 310.9232px;
+}
+
+.mobile-card {
+  left: 45px;
+}
+
+.computer-card {
+  left: 389.3504px;
+}
+
+.recovery-card {
+  left: 45px;
+  top: 833.5931px;
+  width: 673.7008px;
+  height: 122.2565px;
+}
+
+.service-card h3 {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.service-card h3 img {
+  width: 21.164px;
+  height: 19.92px;
+  margin-right: 2.836px;
+  object-fit: contain;
+}
+
+.service-card ul {
+  margin-top: 13.1px;
+  padding: 0;
+  list-style: none;
+  color: var(--body);
+  font-size: 13.3333px;
+  font-weight: 400;
+  line-height: 21.3333px;
+}
+
+.service-card li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.service-card li + li {
+  margin-top: 6px;
+}
+
+.service-card li::before {
+  content: "•";
+  position: absolute;
+  left: 8.63px;
+  top: 0;
+}
+
+.service-card strong {
+  font-weight: 700;
+}
+
+.recovery-card ul {
+  margin-top: 13.1px;
+}
+
+.cta {
+  position: absolute;
+  left: 45px;
+  width: 703.7008px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+}
+
+.cta-top {
+  top: 1000.8496px;
+  height: 121.6701px;
+  border-radius: 10px 10px 0 0;
+}
+
+.cta-top h2 {
+  position: absolute;
+  left: 0;
+  top: 23.1px;
+  width: 100%;
+  font-size: 17.3333px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.cta-top p {
+  position: absolute;
+  left: 0;
+  top: 49.7px;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.cta-bottom {
+  top: 0;
+  height: 67.3848px;
+  border-radius: 0 0 10px 10px;
+}
+
+.phone-button {
+  position: absolute;
+  left: 124.1893px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 455.3223px;
+  height: 42.3848px;
+  border-radius: 24px;
+  background: #fff;
+  color: #0369a1;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.phone-button img {
+  width: 31.7475px;
+  height: 29.88px;
+  margin-right: 7px;
+  object-fit: contain;
+}
+
+.page-two footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50.1867px;
+  background: #1e293b;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .document {
+    display: block;
+    padding: 0;
+  }
+
+  .sheet-frame {
+    width: var(--page-width) !important;
+    height: var(--page-height) !important;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .sheet {
+    transform: none !important;
+    box-shadow: none;
+  }
+}
